@@ -18,7 +18,7 @@ export default function ChatRoomitem(props) {
   };
   return (
     <div className="group">
-      <Link to={`/room/${room.id}`}>
+      <Link to={`/room/${room.slug}`}>
         <div style={{ animationDelay: '0.1' }} className="chatlist__item">
           <div className="avatar">
             <div className="avatar-img">

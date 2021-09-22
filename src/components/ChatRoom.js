@@ -5,8 +5,8 @@ import roomStore from '../stores/roomStore';
 import { observer } from 'mobx-react';
 
 function ChatRoom() {
-  const roomId = useParams().roomId;
-  const room = roomStore.rooms.find((room) => room.id === +roomId);
+  const roomSlug = useParams().roomSlug;
+  const room = roomStore.rooms.find((room) => room.slug === roomSlug);
   const messagesList = room.messages.map((msg) => {
     return <MessageItem msg={msg.msg} />;
   });
@@ -16,7 +16,7 @@ function ChatRoom() {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    roomStore.createMsg(roomId, msg);
+    roomStore.createMsg(room.id, msg);
   };
 
   return (

@@ -9,7 +9,7 @@ function App() {
     <div className="__main">
       <div className="main__chatbody">
         <Switch>
-          <Route path="/room/:roomId">
+          <Route path="/room/:roomSlug">
             <ChatRoom />
           </Route>
           <Route exact path="/">
