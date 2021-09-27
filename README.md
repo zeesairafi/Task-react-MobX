@@ -3,7 +3,7 @@
 Axios chat frontend.
 
 ## Instructions
-here are all the APIs:\
+here are all the APIs:
 1. you need to fetch rooms and list them 
 2. create a room 
 3. update a room
