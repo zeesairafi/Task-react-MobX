@@ -1,8 +1,14 @@
-# TASK-NAME
+# Chatting website
 
 Axios chat frontend.
 
 ## Instructions
+here are all the APIs:\
+1. you need to fetch rooms and list them 
+2. create a room 
+3. update a room
+4. delete a room
+5. create a msg
 
 ```js
 Endpoints:
