@@ -148,8 +148,8 @@ a {
   justify-items: baseline;
 }
 .chatlist__item {
+  background-color: white;
   width: 500px;
-
   display: flex;
   border-bottom: 1px solid #ebe7fb;
   padding-bottom: 10px;
@@ -208,7 +208,7 @@ a {
 .chatlist__item .userMeta span {
   margin: 0;
   padding: 0;
-  color: #ceccd3;
+  color: #4b4a4e;
   font-weight: 400;
   font-size: 12px;
   display: block;

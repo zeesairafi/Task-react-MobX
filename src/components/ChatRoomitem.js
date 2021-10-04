@@ -1,7 +1,6 @@
 import { Button } from 'react-bootstrap';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import roomStore from '../stores/roomStore';
 import UpdateRoomModal from './UpdateRoomModal';
 
 export default function ChatRoomitem(props) {
@@ -13,8 +12,8 @@ export default function ChatRoomitem(props) {
   const openModal = () => setIsOpen(true);
 
   const handleDelete = (event) => {
-    event.preventDefault();
-    roomStore.deleteRoom(room.id);
+    // to do : stop page from refreshing
+    // call a function from app to delete a room (pass room.id as a parameter)
   };
   return (
     <div className="group">

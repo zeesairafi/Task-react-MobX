@@ -1,6 +1,5 @@
 import { Modal, Button, InputGroup, Form } from 'react-bootstrap';
 import React, { useState } from 'react';
-import roomStore from '../stores/roomStore';
 
 export default function CreateRoomModal(props) {
   const [room, setRoom] = useState({
@@ -10,12 +9,13 @@ export default function CreateRoomModal(props) {
     messages: [],
   });
   const handleChange = (event) => {
-    setRoom({ ...room, [event.target.name]: event.target.value });
+    // to do : setRoom state based in input
   };
   const handleSubmit = (event) => {
-    event.preventDefault();
-    roomStore.createRoom(room);
-    props.closeModal();
+    // to do : stop page from refreshing
+    // call a function from app to create a room (pass room as a parameter)
+
+    props.closeModal(); // this is to close the modal that is shown
   };
   return (
     <Modal centered show={props.isOpen} onHide={props.closeModal}>
