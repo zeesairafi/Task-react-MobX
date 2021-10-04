@@ -4,15 +4,12 @@ import './App.css';
 import ChatRoom from './components/ChatRoom';
 import ChatRoomsList from './components/ChatRoomsList';
 import { Route, Switch } from 'react-router';
-import axios from "axios"
 
 function App() {
 
   const [rooms, setRooms] = useState([])
 
-  const fetchRooms = async () => {
-    const response = await axios.get("")
-  }
+
 
   const createRoom = (newRoom) => {
     // to do : call BE to create a room
