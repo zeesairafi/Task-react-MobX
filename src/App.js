@@ -15,7 +15,7 @@ function App() {
     // to do : call BE to create a room
   }
 
-  const deleteRoom = (neidwRoom) => {
+  const deleteRoom = (id) => {
     // to do : call BE to delete a room
   }
 
