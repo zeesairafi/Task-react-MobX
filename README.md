@@ -20,7 +20,7 @@
 ## Create a room:
 1. a createRoom function has been created in App.js 
 2. pass it to ChatRoomList component
-3. the pass it to CreateRoomModel component
+3. then pass it to CreateRoomModel component
 4. in CreateRoomModel a room state has been created for you 
 5. fix the missing code in : handleChange, handleSubmit (read the comments they have hints)
 6. in App.js complete createRoom function  ( make sure to use : async , await, try and catch )
@@ -29,7 +29,7 @@
 ## Delete a room :
 1. a deleteRoom function has been created in App.js 
 2. pass it to ChatRoomList component
-3. the pass it to ChatRoomitem component
+3. then pass it to ChatRoomitem component
 5. in ChatRoomitem fix the missing code in : handleDelete (read the comments they have hints)
 6. in App.js complete deleteRoom function  ( make sure to use : async , await, try and catch )
 7. dont forget to delete the room from the list of rooms 
