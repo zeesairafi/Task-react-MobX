@@ -1,7 +1,7 @@
 # Chatting website
 
 ## First things first:
-1. fork
+1. fork [this repo](https://github.com/JoinCODED/Task-react-MobX/)
 2. clone 
 3. `cd ` to the folder
 4. `yarn install`
