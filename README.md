@@ -12,7 +12,7 @@
 2. Create a file called roomStore in src
 3. define the room class and inside create an empty array room =[]
 4. `import { makeObservable, observable, action } from "mobx";`
-5. make a construtore that will make this a store 
+5. make a constructor that will make this a store 
 6. create a store and export it
 
 
