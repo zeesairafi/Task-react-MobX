@@ -8,64 +8,45 @@
 5. `yarn start`
 
 ## Instructions
-1. Install Axios `yarn add axios`
-2. in App.js `import axios from "axios"`
+1. `yarn add mobx mobx-react`
+2. Create a file called roomStore in src
+3. define the room class and inside create an empty array room =[]
+4. `import { makeObservable, observable, action } from "mobx";`
+5. make a construtore that will make this a store 
+6. create a store and export it
+
 
 ## Fetch rooms :
-1. a state for rooms is created for you in App.js
-2. in App.js create a fetchRooms function ( make sure to use : async , await, try and catch )
-3. fetchRooms should be triggred once App is rendered 
-4. dont forget to setRooms based on the response
+7. move fetchRooms function to the store and modify it (remove setRooms)
+8. add fetchRoom as an action in the constructor 
+9. in the list component :
+    1. `import taskStore from "../taskStore";`
+    2. `import { observer } from "mobx-react";`
+    3. add useEffect to call fetchRooms
+    4.  add observer before component export
 
 ## Create a room:
-1. a createRoom function has been created in App.js 
-2. pass it to ChatRoomList component
-3. then pass it to CreateRoomModel component
-4. in CreateRoomModel a room state has been created for you 
-5. fix the missing code in : handleChange, handleSubmit (read the comments they have hints)
-6. in App.js complete createRoom function  ( make sure to use : async , await, try and catch )
-7. dont forget to add the new room to the list of rooms 
+1. move createRoom function to the store 
+2. add createRoom as an action in the constructor 
+9. in the create room component :
+    1. `import taskStore from "../taskStore";`
+    2. `import { observer } from "mobx-react";`
+    3. call createRoom in the correct place (instead of the old one)
+    4.  add observer before component export
 
 ## Delete a room :
-1. a deleteRoom function has been created in App.js 
-2. pass it to ChatRoomList component
-3. then pass it to ChatRoomitem component
-5. in ChatRoomitem fix the missing code in : handleDelete (read the comments they have hints)
-6. in App.js complete deleteRoom function  ( make sure to use : async , await, try and catch )
-7. dont forget to delete the room from the list of rooms 
+1. move deleteRoom function to the store 
+2. add deleteRoom as an action in the constructor 
+9. in the room component :
+    1. `import taskStore from "../taskStore";`
+    2. `import { observer } from "mobx-react";`
+    3. call deleteRoom in the correct place (instead of the old one)
+    4.  add observer before component export
 
+## Clean up:
+dont forget to clean up the code in App.js and remove room state as you no longer need it !
 
 ### Challenge
 ## Update , Create a msg:
 no steps ! its a challenge 
 
-
-
-## here are all the APIs:
-```js
-Endpoints:
-Fetch all rooms:
-Endpoint: https://coded-task-axios-be.herokuapp.com/rooms
-GET
-
-Create a room:
-Endpoint: https://coded-task-axios-be.herokuapp.com/rooms
-Method: POST
-Data required: title,image,description
-
-Update a room:
-Endpoint: https://coded-task-axios-be.herokuapp.com/rooms/${roomId}
-Method: PUT
-Data required: title,image,description
-
-Delete a room:
-Endpoint: https://coded-task-axios-be.herokuapp.com/rooms/${roomId}
-Method: Delete
-
-Create a msg:
-Endpoint: https://coded-task-axios-be.herokuapp.com/rooms/msg/${roomId}
-Method: POST
-Data required: msg
-
-
-```
