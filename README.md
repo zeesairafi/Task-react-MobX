@@ -23,7 +23,7 @@
     1. `import taskStore from "../taskStore";`
     2. `import { observer } from "mobx-react";`
     3. add useEffect to call fetchRooms
-    4.  add observer before component export
+    4.  add observer before component export if it needs too 
 
 ## Create a room:
 1. move createRoom function to the store 
@@ -32,7 +32,8 @@
     1. `import taskStore from "../taskStore";`
     2. `import { observer } from "mobx-react";`
     3. call createRoom in the correct place (instead of the old one)
-    4.  add observer before component export
+    4.  add observer before component export if it needs too 
+
 
 ## Delete a room :
 1. move deleteRoom function to the store 
@@ -41,7 +42,8 @@
     1. `import taskStore from "../taskStore";`
     2. `import { observer } from "mobx-react";`
     3. call deleteRoom in the correct place (instead of the old one)
-    4.  add observer before component export
+    4.  add observer before component export if it needs too 
+
 
 ## Clean up:
 dont forget to clean up the code in App.js and remove room state as you no longer need it !
