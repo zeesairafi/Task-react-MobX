@@ -4,11 +4,11 @@
 1. fork [this repo](https://github.com/JoinCODED/Task-react-MobX/)
 2. clone 
 3. `cd ` to the folder
-4. `yarn install`
-5. `yarn start`
+4. `npm install`
+5. `npm start`
 
 ## Instructions
-1. `yarn add mobx mobx-react`
+1. `npm install mobx mobx-react`
 2. Create a file called roomStore in src
 3. define the room class and inside create an empty array room =[]
 4. `import { makeObservable, observable, action } from "mobx";`
