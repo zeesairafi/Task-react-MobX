@@ -16,8 +16,7 @@ function ChatRoomsList() {
       <ChatRoomitem
         room={room}
         key={room.id}
-        deleteRoom={props.deleteRoom}
-        updateRoom={props.updateRoom}
+       
       />
     );
   });
@@ -29,7 +28,7 @@ function ChatRoomsList() {
         <CreateRoomModal
           isOpen={isOpen}
           closeModal={closeModal}
-          createRoom={props.createRoom}
+          
         />
       </button>
       <center>

@@ -41,7 +41,7 @@ export default function ChatRoomitem({room}) {
         isOpen={isOpen}
         closeModal={closeModal}
         room={room}
-        updateRoom={props.updateRoom}
+        
       />
     </div>
   );

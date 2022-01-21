@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import roomStore from "../roomStore";
 import MessageItem from "./MessageItem";
 
 function ChatRoom(props) {
@@ -13,7 +14,7 @@ function ChatRoom(props) {
     setMsg({ ...msg, [event.target.name]: event.target.value });
   };
   const handleSubmit = () => {
-    props.createMsg(room.id, msg);
+    roomStore.createMsg(room.id, msg);
   };
 
   return (
