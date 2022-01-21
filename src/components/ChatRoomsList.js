@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import ChatRoomitem from "./ChatRoomitem";
 import CreateRoomModal from "./CreateRoomModal";
+import roomStore from "../roomStore";
+import {observer} from "mobx-react"
 
-function ChatRoomsList(props) {
+function ChatRoomsList() {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeModal = () => setIsOpen(false);
 
   const openModal = () => setIsOpen(true);
 
-  const roomsList = props.rooms.map((room) => {
+  const roomsList = roomStore.rooms.map((room) => {
     return (
       <ChatRoomitem
         room={room}
@@ -40,4 +42,4 @@ function ChatRoomsList(props) {
     </div>
   );
 }
-export default ChatRoomsList;
+export default observer (ChatRoomsList);

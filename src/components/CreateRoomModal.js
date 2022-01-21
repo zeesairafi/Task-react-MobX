@@ -1,5 +1,8 @@
 import { Modal, Button, InputGroup, Form } from "react-bootstrap";
 import React, { useState } from "react";
+import taskStore from "../taskStore";
+import { observer } from "mobx-react";
+import roomStore from "../roomStore";
 
 export default function CreateRoomModal(props) {
   const [room, setRoom] = useState({
@@ -13,8 +16,8 @@ export default function CreateRoomModal(props) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.createRoom(room);
-    props.closeModal(); // this is to close the modal that is shown
+    roomStore.createRoom(room)
+    setRoom({ title: "", image: "", description: "", messages: []})
   };
   return (
     <Modal centered show={props.isOpen} onHide={props.closeModal}>
@@ -25,7 +28,7 @@ export default function CreateRoomModal(props) {
         <Form onSubmit={handleSubmit}>
           <InputGroup>
             <InputGroup.Text>Title</InputGroup.Text>
-            <Form.Control type="text" name="title" onChange={handleChange} />
+            <Form.Control value={room.title} type="text" name="title" onChange={handleChange} />
           </InputGroup>
           <br />
           <InputGroup>
